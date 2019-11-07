@@ -1,0 +1,15 @@
+<form class="new-student" action="/students/new" method="post">
+  <label for="first-name">First Name</label>
+  <input type="text" id="first-name" name="first_name">
+  <label for="second-name">Second Name</label>
+  <input type="text" id="second-name" name="second_name">
+  <label for="age">Age</label>
+  <input type="number" id="age" name="age">
+  <label for="house-select">House</label>
+  <select id="house-select" name="house">
+    <% @houses.each do |house| %>
+    <option value="<%= house.id %>"><%= house.name %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Add Student">
+</form>
